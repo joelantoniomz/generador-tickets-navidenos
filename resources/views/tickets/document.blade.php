@@ -34,8 +34,9 @@
         .cut { width: 4%; border-left: 1px dashed #174993; border-right: 1px dashed #174993; text-align: center; vertical-align: middle; position: relative; }
         .cut-icon { display: block; width: 4mm; height: 4mm; margin: 0 auto; object-fit: contain; }
         .cut-dashes { height: 13mm; border-left: 1px dotted #174993; margin: 1mm auto 0; width: 0; }
-        .brand { height: 9mm; text-align: center; color: #0754bb; font-weight: 900; font-size: 12px; line-height: 1; white-space: nowrap; }
-        .brand img { width: 28px; height: 18px; object-fit: contain; vertical-align: middle; }
+        .brand { height: 10mm; text-align: center; color: #0754bb; font-weight: 900; font-size: 12px; line-height: 1; white-space: nowrap; }
+        .brand img { width: 36px; height: 24px; object-fit: contain; vertical-align: middle; }
+        .brand-name { display: inline-block; vertical-align: middle; font-size: 13px; }
         .slogan { display: block; color: #173c82; font-size: 6.5px; margin-top: 1px; }
         .ribbon { position: relative; margin: 1.5mm 0 1mm; padding: 1.45mm 3mm; background: {{ $accentColor }}; border-top: 1px solid #f8d323; border-bottom: 1px solid #f8d323; color: #fff; font-size: 9px; font-weight: 900; white-space: nowrap; overflow: visible; }
         .ribbon:before,.ribbon:after { content: ''; position: absolute; top: -1px; width: 0; height: 0; border-top: 5mm solid transparent; border-bottom: 5mm solid transparent; }
@@ -78,8 +79,9 @@
         .per-sheet-2 .date { font-size: 8px; }
         .per-sheet-2 .thanks { font-size: 11px; }
         .per-sheet-4 .half { height: 57mm; padding: 5mm 6mm 4mm; }
-        .per-sheet-4 .brand { font-size: 14px; height: 11mm; }
-        .per-sheet-4 .brand img { width: 30px; height: 20px; }
+        .per-sheet-4 .brand { font-size: 15px; height: 12mm; }
+        .per-sheet-4 .brand img { width: 40px; height: 26px; }
+        .per-sheet-4 .brand-name { font-size: 16px; }
         .per-sheet-4 .slogan { font-size: 7px; }
         .per-sheet-4 .ribbon { font-size: 11px; padding: 1.8mm 1.2mm; }
         .per-sheet-4 .number { font-size: 14px; width: 39mm; }
@@ -101,7 +103,7 @@
                             <td class="half">
                                 @if(file_exists($ornamentsPath))<img class="corner-image top" src="{{ $ornamentsPath }}">@endif
                                 @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
-                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="slogan">Tecnología a tu alcance</span></div>
+                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="brand-name">{{ strtoupper($setting->store_name) }}</span><span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
                                 <span class="copy">COPIA DE LA TIENDA</span>
@@ -111,7 +113,7 @@
                             <td class="half">
                                 @if(file_exists($ornamentsPath))<img class="corner-image top" src="{{ $ornamentsPath }}">@endif
                                 @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
-                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="slogan">Tecnología a tu alcance</span></div>
+                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="brand-name">{{ strtoupper($setting->store_name) }}</span><span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
                                 <span class="copy">COPIA DEL CLIENTE</span>

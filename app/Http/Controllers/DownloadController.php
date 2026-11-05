@@ -77,8 +77,8 @@ class DownloadController extends Controller
         $marginTop = $is10 ? 250 : ($is8 ? 300 : 400);
         $marginBottom = $is10 ? 250 : ($is8 ? 300 : 400);
         $ticketHeight = $is10 ? 2080 : ($is8 ? 2620 : ($is6 ? 3550 : 5400));
-        $logoW = $is10 ? 24 : ($is8 ? 26 : 30);
-        $logoH = $is10 ? 16 : ($is8 ? 18 : 21);
+        $logoW = $is10 ? 34 : ($is8 ? 38 : 46);
+        $logoH = $is10 ? 22 : ($is8 ? 25 : 30);
         $canastaW = $is10 ? 24 : ($is8 ? 30 : 38);
         $titleSz = $is10 ? 10 : ($is8 ? 11 : 12);
         $sloganSz = $is10 ? 7 : ($is8 ? 8 : 9);
@@ -135,6 +135,7 @@ class DownloadController extends Controller
                         $hRun->addImage($logoPath, ['width' => $logoW, 'height' => $logoH]);
                         $hRun->addText(' ');
                     }
+                    $hRun->addText(mb_strtoupper($setting->store_name ?: 'Portátiles Perú', 'UTF-8'), ['bold' => true, 'color' => '0B3882', 'size' => $titleSz]);
                     $stub->addText($setting->slogan ?: 'Tecnología a tu alcance', ['color' => '1A56DB', 'size' => $sloganSz, 'bold' => true], $pCenter);
 
                     // Festive Ribbon
@@ -192,6 +193,7 @@ class DownloadController extends Controller
                         $hRun2->addImage($logoPath, ['width' => $logoW, 'height' => $logoH]);
                         $hRun2->addText(' ');
                     }
+                    $hRun2->addText(mb_strtoupper($setting->store_name ?: 'Portátiles Perú', 'UTF-8'), ['bold' => true, 'color' => '0B3882', 'size' => $titleSz]);
                     $cust->addText($setting->slogan ?: 'Tecnología a tu alcance', ['color' => '1A56DB', 'size' => $sloganSz, 'bold' => true], $pCenter);
 
                     // Festive Ribbon

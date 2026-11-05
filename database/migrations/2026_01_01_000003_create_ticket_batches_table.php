@@ -1,0 +1,3 @@
+<?php
+use Illuminate\Database\Migrations\Migration; use Illuminate\Database\Schema\Blueprint; use Illuminate\Support\Facades\Schema;
+return new class extends Migration { public function up(){Schema::create('ticket_batches',function(Blueprint $t){$t->id();$t->foreignId('user_id')->constrained()->cascadeOnDelete();$t->unsignedBigInteger('start_number');$t->unsignedBigInteger('end_number');$t->unsignedInteger('quantity');$t->unsignedTinyInteger('per_sheet')->default(2);$t->string('file_pdf')->nullable();$t->string('file_docx')->nullable();$t->timestamps();$t->index(['start_number','end_number']);});} public function down(){Schema::dropIfExists('ticket_batches');} };

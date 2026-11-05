@@ -1,0 +1,7 @@
+/vendor
+/.env
+/storage/*.key
+/storage/app/tickets/*
+/bootstrap/cache/*
+/.phpunit.result.cache
+/node_modules

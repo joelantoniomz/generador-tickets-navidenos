@@ -55,9 +55,9 @@
         .prize-box strong { display: block; font-size: 7px; }
         .date { display: block; margin: 1mm auto 0; max-width: 90%; padding: 1mm 2mm; border: 1px solid #e53528; border-radius: 4px; color: #143870; font-size: 7px; font-weight: 900; }
         .thanks { margin-top: 1mm; color: #df3027; font-size: 9px; font-style: italic; font-weight: 900; }
-        .corner-image { position: absolute; width: 20mm; height: 5mm; object-fit: contain; }
-        .corner-image.top { top: auto; bottom: 1mm; left: 1.5mm; }
-        .corner-image.bottom { bottom: 1mm; right: 1.5mm; }
+        .corner-image { position: static; display: block; width: 20mm; height: 5mm; object-fit: contain; }
+        .corner-image.top { margin: 0 auto 1mm; }
+        .corner-image.bottom { margin: 1mm auto 0; }
         .per-sheet-1 .half { height: 125mm; padding: 9mm 10mm 7mm; }
         .per-sheet-1 .brand { font-size: 18px; height: 16mm; }
         .per-sheet-1 .brand img { width: 38px; height: 25px; }
@@ -102,17 +102,16 @@
                         <table class="ticket"><tr>
                             <td class="half">
                                 @if(file_exists($ornamentsPath))<img class="corner-image top" src="{{ $ornamentsPath }}">@endif
-                                @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
                                 <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="brand-name">{{ strtoupper($setting->store_name) }}</span><span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
                                 <span class="copy">COPIA DE LA TIENDA</span>
                                 <table class="fields"><tr><td>Nombre:</td><td class="line"></td></tr><tr><td>DNI:</td><td class="line"></td></tr><tr><td>Celular:</td><td class="line"></td></tr></table>
+                                @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
                             </td>
                             <td class="cut">@if(file_exists($scissorsPath))<img class="cut-icon" src="{{ $scissorsPath }}">@endif<div class="cut-dashes"></div></td>
                             <td class="half">
                                 @if(file_exists($ornamentsPath))<img class="corner-image top" src="{{ $ornamentsPath }}">@endif
-                                @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
                                 <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="brand-name">{{ strtoupper($setting->store_name) }}</span><span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
@@ -120,6 +119,7 @@
                                 <div class="prize"><div class="prize-img">@if(file_exists($prizePath))<img src="{{ $prizePath }}">@endif</div><div class="prize-box">PREMIO:<strong>{{ $setting->prize }}</strong></div></div>
                                 @if($dateText)<span class="date">{{ $dateText }}</span>@endif
                                 <div class="thanks">{{ $thanksText }}</div>
+                                @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
                             </td>
                         </tr></table>
                     </td>

@@ -11,7 +11,7 @@
 /* Ajuste final del ticket: tipografía legible, cinta azul y adornos verdes como en la referencia. */
 .horizontal-ticket{min-height:330px}
 .horizontal-half{padding:27px 20px 16px}
-.horizontal-half:before,.horizontal-half:after{content:'✦  ❄  ✦';color:#159b61;font-size:21px;letter-spacing:8px}
+.horizontal-half:before,.horizontal-half:after{content:'✦  ❄  ✦';color:#159b61;font-size:21px;letter-spacing:8px;top:auto;bottom:6px}
 .horizontal-half .ticket-logo:before{width:36px;height:23px}
 .horizontal-half .ticket-logo b{font-size:22px}
 .horizontal-half .ticket-logo small{font-size:11px;margin-left:34px}

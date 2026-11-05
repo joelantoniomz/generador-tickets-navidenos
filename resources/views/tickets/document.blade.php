@@ -55,7 +55,7 @@
         .date { display: block; margin: 1mm auto 0; max-width: 90%; padding: 1mm 2mm; border: 1px solid #e53528; border-radius: 4px; color: #143870; font-size: 7px; font-weight: 900; }
         .thanks { margin-top: 1mm; color: #df3027; font-size: 9px; font-style: italic; font-weight: 900; }
         .corner-image { position: absolute; width: 20mm; height: 5mm; object-fit: contain; }
-        .corner-image.top { top: 1mm; left: 1.5mm; }
+        .corner-image.top { top: auto; bottom: 1mm; left: 1.5mm; }
         .corner-image.bottom { bottom: 1mm; right: 1.5mm; }
         .per-sheet-1 .half { height: 125mm; padding: 9mm 10mm 7mm; }
         .per-sheet-1 .brand { font-size: 18px; height: 16mm; }

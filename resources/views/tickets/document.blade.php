@@ -16,6 +16,9 @@
             : ($setting->date_replacement ?: '');
         $logoPath = $setting->logo_path ? public_path(ltrim($setting->logo_path, '/')) : public_path('images/laptop_logo_2x.png');
         $prizePath = $setting->prize_image_path ? public_path(ltrim($setting->prize_image_path, '/')) : public_path('images/canasta_sorteo_2x.png');
+        $cornerLeftPath = public_path('images/festive_holly_corner.svg');
+        $cornerRightPath = public_path('images/festive_holly_corner_right.svg');
+        $scissorsPath = public_path('images/scissors_blue.png');
     @endphp
     <style>
         @page { size: A4 landscape; margin: 3mm; }
@@ -27,7 +30,9 @@
         .cell { width: 50%; padding: 0; vertical-align: top; border: 1px solid #174993; border-radius: 4px; overflow: hidden; }
         .ticket { width: 100%; border-collapse: collapse; table-layout: fixed; }
         .half { width: 48%; padding: 3mm 4mm 2.5mm; text-align: center; vertical-align: top; height: 31mm; position: relative; }
-        .cut { width: 4%; border-left: 1px dashed #174993; border-right: 1px dashed #174993; text-align: center; vertical-align: middle; color: #174993; font-size: 10px; line-height: 1.25; }
+        .cut { width: 4%; border-left: 1px dashed #174993; border-right: 1px dashed #174993; text-align: center; vertical-align: middle; position: relative; }
+        .cut-icon { display: block; width: 4mm; height: 4mm; margin: 0 auto; object-fit: contain; }
+        .cut-dashes { height: 13mm; border-left: 1px dotted #174993; margin: 1mm auto 0; width: 0; }
         .brand { height: 9mm; text-align: center; color: #0754bb; font-weight: 900; font-size: 12px; line-height: 1; white-space: nowrap; }
         .brand img { width: 28px; height: 18px; object-fit: contain; vertical-align: middle; }
         .slogan { display: block; color: #173c82; font-size: 6.5px; margin-top: 1px; }
@@ -45,9 +50,9 @@
         .prize-box strong { display: block; font-size: 7px; }
         .date { display: block; margin: 1mm auto 0; max-width: 90%; padding: 1mm 2mm; border: 1px solid #e53528; border-radius: 4px; color: #143870; font-size: 7px; font-weight: 900; }
         .thanks { margin-top: 1mm; color: #df3027; font-size: 9px; font-style: italic; font-weight: 900; }
-        .ornament { position: absolute; color: #159b61; font-size: 8px; letter-spacing: 1.2mm; line-height: 1; }
-        .ornament.top { top: 1mm; left: 1.5mm; }
-        .ornament.bottom { bottom: 1mm; right: 1.5mm; }
+        .corner-image { position: absolute; width: 6mm; height: 6mm; object-fit: contain; }
+        .corner-image.top { top: 1mm; left: 1.5mm; }
+        .corner-image.bottom { bottom: 1mm; right: 1.5mm; transform: rotate(180deg); }
     </style>
 </head>
 <body>
@@ -60,21 +65,23 @@
                     <td class="cell">
                         <table class="ticket"><tr>
                             <td class="half">
-                                <span class="ornament top">✦ ❄ ✦</span><span class="ornament bottom">✦ ❄ ✦</span>
+                                @if(file_exists($cornerLeftPath))<img class="corner-image top" src="{{ $cornerLeftPath }}">@endif
+                                @if(file_exists($cornerRightPath))<img class="corner-image bottom" src="{{ $cornerRightPath }}">@endif
                                 <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif {{ strtoupper($setting->store_name) }}<span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
                                 <span class="copy">COPIA DE LA TIENDA</span>
                                 <table class="fields"><tr><td>Nombre:</td><td class="line"></td></tr><tr><td>DNI:</td><td class="line"></td></tr><tr><td>Celular:</td><td class="line"></td></tr></table>
                             </td>
-                            <td class="cut">✂<br>⋮<br>⋮<br>⋮</td>
+                            <td class="cut">@if(file_exists($scissorsPath))<img class="cut-icon" src="{{ $scissorsPath }}">@endif<div class="cut-dashes"></div></td>
                             <td class="half">
-                                <span class="ornament top">✦ ❄ ✦</span><span class="ornament bottom">✦ ❄ ✦</span>
+                                @if(file_exists($cornerLeftPath))<img class="corner-image top" src="{{ $cornerLeftPath }}">@endif
+                                @if(file_exists($cornerRightPath))<img class="corner-image bottom" src="{{ $cornerRightPath }}">@endif
                                 <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif {{ strtoupper($setting->store_name) }}<span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
                                 <span class="copy">COPIA DEL CLIENTE</span>
-                                <div class="prize"><div class="prize-img">@if(file_exists($prizePath))<img src="{{ $prizePath }}">@endif</div><div class="prize-box">🎁 PREMIO:<strong>{{ $setting->prize }}</strong></div></div>
+                                <div class="prize"><div class="prize-img">@if(file_exists($prizePath))<img src="{{ $prizePath }}">@endif</div><div class="prize-box">PREMIO:<strong>{{ $setting->prize }}</strong></div></div>
                                 @if($dateText)<span class="date">{{ $dateText }}</span>@endif
                                 <div class="thanks">{{ $thanksText }}</div>
                             </td>

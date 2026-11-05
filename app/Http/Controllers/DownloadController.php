@@ -238,7 +238,7 @@ class DownloadController extends Controller
                         'borderColor' => 'FACC15',
                         'cellMargin' => $is10 ? 2 : 4,
                     ]);
-                    $prTxt->addText('🎄 PREMIO:', ['bold' => true, 'color' => 'FEF08A', 'size' => $sloganSz], $pCenter);
+                    $prTxt->addText('PREMIO:', ['bold' => true, 'color' => 'FEF08A', 'size' => $sloganSz], $pCenter);
                     $prTxt->addText($setting->prize ?: 'Canasta Navideña', ['bold' => true, 'color' => 'FFFFFF', 'size' => $prizeSz], $pCenter);
 
                     // Promo Condition, Date & Greeting

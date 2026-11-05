@@ -121,10 +121,10 @@
                         <select name="per_sheet" class="form-control-custom">
                             <option value="1">1 ticket por hoja</option>
                             <option value="2">2 tickets por hoja</option>
-                            <option value="4">4 tickets por hoja</option>
+                            <option value="4" selected>4 tickets por hoja</option>
                             <option value="6">6 tickets por hoja</option>
                             <option value="8">8 tickets por hoja (4 filas - Tamaño Grande)</option>
-                            <option value="10" selected>10 tickets por hoja (Completa toda la hoja A4 - 5 filas)</option>
+                            <option value="10">10 tickets por hoja (Completa toda la hoja A4 - 5 filas)</option>
                         </select>
                     </div>
 

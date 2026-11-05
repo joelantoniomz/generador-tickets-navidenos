@@ -53,11 +53,41 @@
         .corner-image { position: absolute; width: 6mm; height: 6mm; object-fit: contain; }
         .corner-image.top { top: 1mm; left: 1.5mm; }
         .corner-image.bottom { bottom: 1mm; right: 1.5mm; transform: rotate(180deg); }
+        .per-sheet-1 .half { height: 125mm; padding: 9mm 10mm 7mm; }
+        .per-sheet-1 .brand { font-size: 18px; height: 16mm; }
+        .per-sheet-1 .brand img { width: 38px; height: 25px; }
+        .per-sheet-1 .slogan { font-size: 9px; }
+        .per-sheet-1 .ribbon { font-size: 15px; padding: 3mm 2mm; }
+        .per-sheet-1 .number { font-size: 18px; width: 48mm; }
+        .per-sheet-1 .copy { font-size: 10px; width: 42mm; }
+        .per-sheet-1 .fields td { font-size: 12px; padding: 2mm 0; }
+        .per-sheet-1 .date { font-size: 10px; }
+        .per-sheet-1 .thanks { font-size: 14px; }
+        .per-sheet-2 .half { height: 78mm; padding: 6mm 7mm 5mm; }
+        .per-sheet-2 .brand { font-size: 15px; height: 12mm; }
+        .per-sheet-2 .brand img { width: 32px; height: 21px; }
+        .per-sheet-2 .slogan { font-size: 8px; }
+        .per-sheet-2 .ribbon { font-size: 12px; padding: 2mm 1.5mm; }
+        .per-sheet-2 .number { font-size: 15px; width: 42mm; }
+        .per-sheet-2 .copy { font-size: 8px; width: 37mm; }
+        .per-sheet-2 .fields td { font-size: 10px; padding: 1.5mm 0; }
+        .per-sheet-2 .date { font-size: 8px; }
+        .per-sheet-2 .thanks { font-size: 11px; }
+        .per-sheet-4 .half { height: 57mm; padding: 5mm 6mm 4mm; }
+        .per-sheet-4 .brand { font-size: 14px; height: 11mm; }
+        .per-sheet-4 .brand img { width: 30px; height: 20px; }
+        .per-sheet-4 .slogan { font-size: 7px; }
+        .per-sheet-4 .ribbon { font-size: 11px; padding: 1.8mm 1.2mm; }
+        .per-sheet-4 .number { font-size: 14px; width: 39mm; }
+        .per-sheet-4 .copy { font-size: 7px; width: 34mm; }
+        .per-sheet-4 .fields td { font-size: 9px; padding: 1.2mm 0; }
+        .per-sheet-4 .date { font-size: 7.5px; }
+        .per-sheet-4 .thanks { font-size: 10px; }
     </style>
 </head>
 <body>
 @foreach($chunks as $sheet)
-    <div class="sheet">
+    <div class="sheet per-sheet-{{ $perSheet }}">
         <table class="grid">
             @foreach(array_chunk($sheet, 2) as $row)
                 <tr>

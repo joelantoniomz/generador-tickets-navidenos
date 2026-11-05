@@ -135,7 +135,6 @@ class DownloadController extends Controller
                         $hRun->addImage($logoPath, ['width' => $logoW, 'height' => $logoH]);
                         $hRun->addText(' ');
                     }
-                    $hRun->addText(mb_strtoupper($setting->store_name ?: 'Portátiles Perú', 'UTF-8'), ['bold' => true, 'color' => '0B3882', 'size' => $titleSz]);
                     $stub->addText($setting->slogan ?: 'Tecnología a tu alcance', ['color' => '1A56DB', 'size' => $sloganSz, 'bold' => true], $pCenter);
 
                     // Festive Ribbon
@@ -193,7 +192,6 @@ class DownloadController extends Controller
                         $hRun2->addImage($logoPath, ['width' => $logoW, 'height' => $logoH]);
                         $hRun2->addText(' ');
                     }
-                    $hRun2->addText(mb_strtoupper($setting->store_name ?: 'Portátiles Perú', 'UTF-8'), ['bold' => true, 'color' => '0B3882', 'size' => $titleSz]);
                     $cust->addText($setting->slogan ?: 'Tecnología a tu alcance', ['color' => '1A56DB', 'size' => $sloganSz, 'bold' => true], $pCenter);
 
                     // Festive Ribbon

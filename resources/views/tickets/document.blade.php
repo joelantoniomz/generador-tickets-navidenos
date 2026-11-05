@@ -18,6 +18,7 @@
         $prizePath = $setting->prize_image_path ? public_path(ltrim($setting->prize_image_path, '/')) : public_path('images/canasta_sorteo_2x.png');
         $cornerLeftPath = public_path('images/festive_holly_corner.svg');
         $cornerRightPath = public_path('images/festive_holly_corner_right.svg');
+        $ornamentsPath = public_path('images/ticket_ornaments.svg');
         $scissorsPath = public_path('images/scissors_blue.png');
     @endphp
     <style>
@@ -36,7 +37,10 @@
         .brand { height: 9mm; text-align: center; color: #0754bb; font-weight: 900; font-size: 12px; line-height: 1; white-space: nowrap; }
         .brand img { width: 28px; height: 18px; object-fit: contain; vertical-align: middle; }
         .slogan { display: block; color: #173c82; font-size: 6.5px; margin-top: 1px; }
-        .ribbon { margin: 1.5mm 0 1mm; padding: 1.45mm 1mm; background: {{ $accentColor }}; border-top: 1px solid #f8d323; border-bottom: 1px solid #f8d323; color: #fff; font-size: 9px; font-weight: 900; white-space: nowrap; overflow: hidden; }
+        .ribbon { position: relative; margin: 1.5mm 0 1mm; padding: 1.45mm 3mm; background: {{ $accentColor }}; border-top: 1px solid #f8d323; border-bottom: 1px solid #f8d323; color: #fff; font-size: 9px; font-weight: 900; white-space: nowrap; overflow: visible; }
+        .ribbon:before,.ribbon:after { content: ''; position: absolute; top: -1px; width: 0; height: 0; border-top: 5mm solid transparent; border-bottom: 5mm solid transparent; }
+        .ribbon:before { left: -3mm; border-right: 3mm solid {{ $accentColor }}; }
+        .ribbon:after { right: -3mm; border-left: 3mm solid {{ $accentColor }}; }
         .number { display: block; width: 34mm; margin: 0 auto 1mm; padding: 1mm; border-radius: 4px; background: #123e76; color: #fff; font-size: 11px; font-weight: 900; }
         .copy { display: block; width: 29mm; margin: 0 auto 2mm; padding: .8mm; border-radius: 8px; background: #0875c9; color: #fff; font-size: 6.5px; font-weight: 900; }
         .fields { width: 95%; margin: 0 auto; border-collapse: collapse; text-align: left; }
@@ -50,9 +54,9 @@
         .prize-box strong { display: block; font-size: 7px; }
         .date { display: block; margin: 1mm auto 0; max-width: 90%; padding: 1mm 2mm; border: 1px solid #e53528; border-radius: 4px; color: #143870; font-size: 7px; font-weight: 900; }
         .thanks { margin-top: 1mm; color: #df3027; font-size: 9px; font-style: italic; font-weight: 900; }
-        .corner-image { position: absolute; width: 6mm; height: 6mm; object-fit: contain; }
+        .corner-image { position: absolute; width: 20mm; height: 5mm; object-fit: contain; }
         .corner-image.top { top: 1mm; left: 1.5mm; }
-        .corner-image.bottom { bottom: 1mm; right: 1.5mm; transform: rotate(180deg); }
+        .corner-image.bottom { bottom: 1mm; right: 1.5mm; }
         .per-sheet-1 .half { height: 125mm; padding: 9mm 10mm 7mm; }
         .per-sheet-1 .brand { font-size: 18px; height: 16mm; }
         .per-sheet-1 .brand img { width: 38px; height: 25px; }
@@ -95,9 +99,9 @@
                     <td class="cell">
                         <table class="ticket"><tr>
                             <td class="half">
-                                @if(file_exists($cornerLeftPath))<img class="corner-image top" src="{{ $cornerLeftPath }}">@endif
-                                @if(file_exists($cornerRightPath))<img class="corner-image bottom" src="{{ $cornerRightPath }}">@endif
-                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif {{ strtoupper($setting->store_name) }}<span class="slogan">Tecnología a tu alcance</span></div>
+                                @if(file_exists($ornamentsPath))<img class="corner-image top" src="{{ $ornamentsPath }}">@endif
+                                @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
+                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
                                 <span class="copy">COPIA DE LA TIENDA</span>
@@ -105,9 +109,9 @@
                             </td>
                             <td class="cut">@if(file_exists($scissorsPath))<img class="cut-icon" src="{{ $scissorsPath }}">@endif<div class="cut-dashes"></div></td>
                             <td class="half">
-                                @if(file_exists($cornerLeftPath))<img class="corner-image top" src="{{ $cornerLeftPath }}">@endif
-                                @if(file_exists($cornerRightPath))<img class="corner-image bottom" src="{{ $cornerRightPath }}">@endif
-                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif {{ strtoupper($setting->store_name) }}<span class="slogan">Tecnología a tu alcance</span></div>
+                                @if(file_exists($ornamentsPath))<img class="corner-image top" src="{{ $ornamentsPath }}">@endif
+                                @if(file_exists($ornamentsPath))<img class="corner-image bottom" src="{{ $ornamentsPath }}">@endif
+                                <div class="brand">@if(file_exists($logoPath))<img src="{{ $logoPath }}">@endif<span class="slogan">Tecnología a tu alcance</span></div>
                                 <div class="ribbon">{{ $ribbonText }}</div>
                                 <span class="number">N.º {{ str_pad($number, 6, '0', STR_PAD_LEFT) }}</span>
                                 <span class="copy">COPIA DEL CLIENTE</span>

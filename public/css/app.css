@@ -8,3 +8,19 @@
 .designer-image-form section[hidden]{display:none}.designer-image-form h3{color:#14336d;font-size:14px;margin:0 0 12px}.designer-check{display:flex!important;align-items:center;gap:6px}.designer-check input{width:auto!important;margin:0!important}.designer-color-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.designer-color-grid button{border:0;border-radius:7px;color:#fff;padding:10px;font-weight:900;cursor:pointer}.designer-help{font-size:11px;color:#6c7d98;line-height:1.5}.designer-image-option{display:block;width:100%;margin:8px 0;border:1px solid #c7d8ed;background:#f4f8ff;color:#164a8f;border-radius:7px;padding:9px;text-align:left;font-weight:800;cursor:pointer}.format-icons{display:flex;gap:4px}.format-icons a{border-radius:4px;padding:3px 5px;text-decoration:none;font-size:9px;font-weight:900}.icon-pdf{background:#ffe2e2;color:#d52d35}.icon-word{background:#ddecff;color:#0c63be}.action-icons{display:flex;align-items:center;gap:6px}.action-icons a,.action-icons button,.download-icon{border:0;background:#e8f2ff;color:#0877f9;border-radius:5px;padding:4px 6px;text-decoration:none;cursor:pointer;font-size:13px}.action-icons form{display:inline}.action-icons button{background:#ffe7e7;color:#d83238}.download-icon{display:inline-block}.image-panel-head .head-actions a{white-space:nowrap}
 .uploaded-prize-image{display:block;max-width:62px;max-height:62px;object-fit:contain;margin:0 auto 4px;border-radius:4px}.fake-logo{background-position:center;background-repeat:no-repeat;background-size:contain}
 .horizontal-half .ticket-logo{font-size:0;white-space:nowrap}.horizontal-half .ticket-logo:before{content:'';display:inline-block;width:32px;height:20px;background:url('/images/laptop_logo_2x.png') center/contain no-repeat;vertical-align:middle;margin-right:4px}.horizontal-half .ticket-logo b{font-size:19px;vertical-align:middle}.horizontal-half .ticket-logo small{font-size:10px}.mini-ticket span{font-size:0}.mini-ticket span:before{content:'';display:inline-block;width:20px;height:13px;background:url('/images/laptop_logo_2x.png') center/contain no-repeat;vertical-align:middle;margin-right:3px}.mini-ticket span strong{font-size:13px}
+/* Ajuste final del ticket: tipografía legible, cinta azul y adornos verdes como en la referencia. */
+.horizontal-ticket{min-height:330px}
+.horizontal-half{padding:27px 20px 16px}
+.horizontal-half:before,.horizontal-half:after{content:'✦  ❄  ✦';color:#159b61;font-size:21px;letter-spacing:8px}
+.horizontal-half .ticket-logo:before{width:36px;height:23px}
+.horizontal-half .ticket-logo b{font-size:22px}
+.horizontal-half .ticket-logo small{font-size:11px;margin-left:34px}
+.red-ribbon{background:#0877f9!important;font-size:17px;padding:7px 7px;margin:12px 0 9px}
+.red-ribbon span{color:#ffe636}
+.blue-number{font-size:22px;padding:5px;width:170px}
+.blue-pill{font-size:11px;width:158px;padding:5px;margin-bottom:13px}
+.horizontal-half p{font-size:13px;margin:9px 10px}
+.client-side .client-prize{font-size:13px;padding:9px;max-width:175px}
+.client-prize strong{font-size:15px}
+.client-side .client-date{font-size:11px!important}
+.client-side .client-thanks{font-size:18px!important}

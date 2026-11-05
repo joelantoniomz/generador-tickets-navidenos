@@ -80,14 +80,14 @@ class DownloadController extends Controller
         $logoW = $is10 ? 24 : ($is8 ? 26 : 30);
         $logoH = $is10 ? 16 : ($is8 ? 18 : 21);
         $canastaW = $is10 ? 24 : ($is8 ? 30 : 38);
-        $titleSz = $is10 ? 9 : ($is8 ? 10 : 11.5);
-        $sloganSz = $is10 ? 6.5 : ($is8 ? 7.5 : 8.5);
-        $ribbonSz = $is10 ? 6.5 : ($is8 ? 7.5 : 9);
-        $numSz = $is10 ? 8 : ($is8 ? 9.5 : 11);
-        $pillSz = $is10 ? 5.5 : ($is8 ? 6.5 : 7.5);
-        $formSz = $is10 ? 6 : ($is8 ? 7 : 8);
-        $prizeSz = $is10 ? 7 : ($is8 ? 8.5 : 10);
-        $thanksSz = $is10 ? 7.5 : ($is8 ? 9 : 11);
+        $titleSz = $is10 ? 10 : ($is8 ? 11 : 12);
+        $sloganSz = $is10 ? 7 : ($is8 ? 8 : 9);
+        $ribbonSz = $is10 ? 8 : ($is8 ? 8.5 : 10);
+        $numSz = $is10 ? 9 : ($is8 ? 10 : 11.5);
+        $pillSz = $is10 ? 6.2 : ($is8 ? 7 : 8);
+        $formSz = $is10 ? 6.8 : ($is8 ? 7.5 : 8.5);
+        $prizeSz = $is10 ? 7.8 : ($is8 ? 9 : 10.5);
+        $thanksSz = $is10 ? 8.5 : ($is8 ? 9.5 : 11.5);
         $scissorsW = $is10 ? 9 : ($is8 ? 11 : 13);
         $cellPad = $is10 ? 15 : ($is8 ? 25 : 35);
 

@@ -28,14 +28,14 @@
         .ticket { width: 100%; border-collapse: collapse; table-layout: fixed; }
         .half { width: 48%; padding: 3mm 4mm 2.5mm; text-align: center; vertical-align: top; height: 31mm; }
         .cut { width: 4%; border-left: 1px dashed #174993; border-right: 1px dashed #174993; text-align: center; vertical-align: middle; color: #174993; font-size: 10px; line-height: 1.25; }
-        .brand { height: 9mm; text-align: center; color: #0754bb; font-weight: 900; font-size: 10px; line-height: 1; white-space: nowrap; }
-        .brand img { width: 22px; height: 15px; object-fit: contain; vertical-align: middle; }
-        .slogan { display: block; color: #173c82; font-size: 5.5px; margin-top: 1px; }
-        .ribbon { margin: 1.5mm 0 1mm; padding: 1.2mm 1mm; background: {{ $accentColor }}; border-top: 1px solid #f8d323; border-bottom: 1px solid #f8d323; color: #fff; font-size: 7px; font-weight: 900; white-space: nowrap; overflow: hidden; }
-        .number { display: block; width: 34mm; margin: 0 auto 1mm; padding: 1mm; border-radius: 4px; background: #123e76; color: #fff; font-size: 9px; font-weight: 900; }
-        .copy { display: block; width: 29mm; margin: 0 auto 2mm; padding: .8mm; border-radius: 8px; background: #0875c9; color: #fff; font-size: 5px; font-weight: 900; }
+        .brand { height: 9mm; text-align: center; color: #0754bb; font-weight: 900; font-size: 11px; line-height: 1; white-space: nowrap; }
+        .brand img { width: 24px; height: 16px; object-fit: contain; vertical-align: middle; }
+        .slogan { display: block; color: #173c82; font-size: 6px; margin-top: 1px; }
+        .ribbon { margin: 1.5mm 0 1mm; padding: 1.35mm 1mm; background: {{ $accentColor }}; border-top: 1px solid #f8d323; border-bottom: 1px solid #f8d323; color: #fff; font-size: 8px; font-weight: 900; white-space: nowrap; overflow: hidden; }
+        .number { display: block; width: 34mm; margin: 0 auto 1mm; padding: 1mm; border-radius: 4px; background: #123e76; color: #fff; font-size: 10px; font-weight: 900; }
+        .copy { display: block; width: 29mm; margin: 0 auto 2mm; padding: .8mm; border-radius: 8px; background: #0875c9; color: #fff; font-size: 5.8px; font-weight: 900; }
         .fields { width: 95%; margin: 0 auto; border-collapse: collapse; text-align: left; }
-        .fields td { padding: .8mm 0; font-size: 6.5px; font-weight: 800; white-space: nowrap; }
+        .fields td { padding: .8mm 0; font-size: 7px; font-weight: 800; white-space: nowrap; }
         .fields .line { width: 75%; border-bottom: 1px solid #122952; }
         .note { display: block; margin: 1.5mm auto 0; padding: .6mm 2mm; border: 1px dashed #8cb9ea; border-radius: 5px; color: #20518b; background: #eef6ff; font-size: 4.5px; }
         .prize { display: table; width: 90%; margin: 2mm auto 1mm; border-collapse: separate; border-spacing: 1mm; }
@@ -43,8 +43,8 @@
         .prize-img img { max-width: 12mm; max-height: 10mm; object-fit: contain; }
         .prize-box { display: table-cell; vertical-align: middle; border-radius: 5px; padding: 1.5mm; background: #e63129; color: #fff; font-size: 6px; font-weight: 900; }
         .prize-box strong { display: block; font-size: 7px; }
-        .date { display: block; margin: 1mm auto 0; max-width: 90%; padding: 1mm 2mm; border: 1px solid #e53528; border-radius: 4px; color: #143870; font-size: 5.5px; font-weight: 900; }
-        .thanks { margin-top: 1mm; color: #df3027; font-size: 7px; font-style: italic; font-weight: 900; }
+        .date { display: block; margin: 1mm auto 0; max-width: 90%; padding: 1mm 2mm; border: 1px solid #e53528; border-radius: 4px; color: #143870; font-size: 6.2px; font-weight: 900; }
+        .thanks { margin-top: 1mm; color: #df3027; font-size: 8px; font-style: italic; font-weight: 900; }
     </style>
 </head>
 <body>
